@@ -12,7 +12,7 @@ const techStack = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Technical Skills

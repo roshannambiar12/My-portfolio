@@ -59,7 +59,7 @@ const handleContactSubmit = (e) => {
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 px-4">
+    <section id="contact" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
           Get In Touch

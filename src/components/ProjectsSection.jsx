@@ -76,7 +76,7 @@ const cardVariants = {
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-4 bg-gray-900">
+    <section id="projects" className="py-20 px-4  bg-gray-800/50">
       <div className="max-w-7xl mx-auto">
         <motion.h2
           className="text-4xl md:text-5xl font-bold text-center mb-16 text-white"
