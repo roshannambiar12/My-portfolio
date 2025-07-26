@@ -14,7 +14,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
           Technical Skills
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

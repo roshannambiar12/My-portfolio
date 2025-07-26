@@ -61,7 +61,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 px-4 bg-black">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
           Get In Touch
         </h2>
         <div className="grid lg:grid-cols-2 gap-12">
@@ -95,9 +95,9 @@ const ContactSection = () => {
             </div>
             <div className="flex gap-4 pt-8">
               {[
-                { icon: <Github className="w-6 h-6" />, href: 'https://github.com/roshannambiar12' },
-                { icon: <Linkedin className="w-6 h-6" />, href: 'https://www.linkedin.com/in/roshan-tp' },
-                { icon: <Mail className="w-6 h-6" />, href: 'mailto:roshannambiar12@gmail.com' },
+                { icon: <Github className="w-6 h-6 text-white" />, href: 'https://github.com/roshannambiar12' },
+                { icon: <Linkedin className="w-6 h-6 text-white" />, href: 'https://www.linkedin.com/in/roshan-tp' },
+                { icon: <Mail className="w-6 h-6 text-white" />, href: 'mailto:roshannambiar12@gmail.com' },
               ].map((social, index) => (
                 <a
                   key={index}
