@@ -46,8 +46,8 @@ const Page = () => {
       {/* <ContactForm /> */}
       <AboutSection />
       <SkillsSection />
-       <ImpactReport />
       <ProjectsSection />
+       <ImpactReport /> 
       <ContactSection />
     </div>
   );
