@@ -57,7 +57,7 @@ const HeroSection = ({ scrollToSection }) => {
 
           {/* Left Side - Animated Circular Image */}
           <motion.div
-            className="flex-1 flex justify-center lg:justify-start mb-8 lg:mb-0"
+            className="flex-1 flex justify-center lg:justify-center mb-8 lg:mb-0"
             variants={itemVariants}
           >
             <div className="relative">
@@ -66,7 +66,7 @@ const HeroSection = ({ scrollToSection }) => {
                 className="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-red-800/80 to-red-950/90 p-3 sm:p-4 shadow-2xl"
                 whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
               >
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-red-700/20 to-red-900/40 p-2">
+                <div className="w-full h-full rounded-full  p-2">
                   <div className="w-full h-full rounded-full overflow-hidden shadow-inner relative">
                     <Image
                       src={roshan}
@@ -106,7 +106,7 @@ const HeroSection = ({ scrollToSection }) => {
             >
               100% Modern Web Applications Made By Roshan.
               <br />
-              <span className="text-cyan-200">Specialized in MEARN Stack, Next.js, React.js and Tailwind CSS.</span>
+              <span className="text-cyan-200 text-md">Specialized in MEARN Stack, Next.js, React.js and Tailwind CSS.</span>
             </motion.p>
 
             {/* Animated and responsive button layout */}
