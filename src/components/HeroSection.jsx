@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
 import roshan from "../assets/roshan.png";
 
 // Animation variants for the container to orchestrate staggered animations
@@ -45,6 +46,27 @@ const HeroSection = ({ scrollToSection }) => {
 
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/60 z-10"></div>
+
+      {/* Social Media Links */}
+      <motion.div
+        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-30 flex flex-col gap-4"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <motion.a href="https://github.com/roshannambiar12" target="_blank" rel="noopener noreferrer" variants={itemVariants}>
+          <Github className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
+        </motion.a>
+        <motion.a href="https://www.linkedin.com/in/roshan-tp" target="_blank" rel="noopener noreferrer" variants={itemVariants}>
+          <Linkedin className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
+        </motion.a>
+        <motion.a href="mailto:roshannambiar12@gmail.com" variants={itemVariants}>
+          <Mail className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
+        </motion.a>
+        <motion.a href="https://www.instagram.com/roshan_nambiar" target="_blank" rel="noopener noreferrer" variants={itemVariants}>
+          <Instagram className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
+        </motion.a>
+      </motion.div>
 
       {/* Content Container with Staggered Animations */}
       <motion.div
