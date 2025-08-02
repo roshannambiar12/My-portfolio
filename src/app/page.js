@@ -7,7 +7,7 @@ import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import ImpactReport from '../components/ImpactReport'; 
-// import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/ContactForm';
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,13 +42,13 @@ const Page = () => {
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
       />
-      <HeroSection scrollToSection={scrollToSection} />
-      {/* <ContactForm /> */}
+      <HeroSection scrollToSection={scrollToSection} />    
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
        <ImpactReport /> 
       <ContactSection />
+       <ContactForm />
     </div>
   );
 };

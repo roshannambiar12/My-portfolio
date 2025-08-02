@@ -7,15 +7,17 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-  // Note: The ': any' is removed for JavaScript
   async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
+    // Reset error/success states on new submission
+    setError(null);
+    setSuccess(false);
 
     const data = {
       name: String(event.target.name.value),
       email: String(event.target.email.value),
-      phone: String(event.target.phone.value), // <-- NEW: Get phone number
+      phone: String(event.target.phone.value),
       message: String(event.target.message.value),
     };
 
@@ -29,24 +31,21 @@ export default function ContactForm() {
       console.log("Message sent successfully");
       setSuccess(true);
       setLoading(false);
-      event.target.reset();
+      event.target.reset(); // Resets the form fields
     } else {
       const errorData = await response.json();
-      setError(errorData.message || "Error sending message");
+      setError(errorData.message || "An unknown error occurred.");
       console.log("Error sending message");
       setLoading(false);
     }
   }
 
-  // The JSX is identical to the TSX version from here down
   return (
     <div className="w-full max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md">
-      {/* --- NEW: HEADING --- */}
       <div className="mb-8 text-center">
         <h2 className="text-4xl font-bold text-gray-800">Get In Touch</h2>
         <p className="text-gray-500">I'd love to hear from you! Please fill out the form below.</p>
       </div>
-      {/* --- END NEW HEADING --- */}
 
       <form onSubmit={handleSubmit}>
         <div className="flex flex-wrap -mx-3 mb-6">
@@ -57,13 +56,13 @@ export default function ContactForm() {
             <input
               type="text"
               id="name"
+              name="name" // <-- CORRECTION
               required
               minLength={3}
               maxLength={150}
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             />
           </div>
-          {/* --- NEW: PHONE NUMBER FIELD --- */}
           <div className="w-full md:w-1/2 px-3">
             <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="phone">
               Phone Number (Optional)
@@ -71,11 +70,11 @@ export default function ContactForm() {
             <input
               type="tel"
               id="phone"
+              name="phone" // <-- CORRECTION
               maxLength={150}
               className="appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-blue-500"
             />
           </div>
-          {/* --- END NEW PHONE NUMBER FIELD --- */}
         </div>
         <div className="flex flex-wrap -mx-3 mb-6">
           <div className="w-full px-3">
@@ -85,6 +84,7 @@ export default function ContactForm() {
             <input
               type="email"
               id="email"
+              name="email" // <-- CORRECTION
               required
               minLength={5}
               maxLength={150}
@@ -100,6 +100,7 @@ export default function ContactForm() {
             <textarea
               rows={5}
               id="message"
+              name="message" // <-- CORRECTION
               required
               minLength={10}
               maxLength={500}

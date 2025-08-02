@@ -63,7 +63,7 @@ const HeroSection = ({ scrollToSection }) => {
         <motion.a href="mailto:roshannambiar12@gmail.com" variants={itemVariants}>
           <Mail className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
         </motion.a>
-        <motion.a href="https://www.instagram.com/roshan_nambiar" target="_blank" rel="noopener noreferrer" variants={itemVariants}>
+        <motion.a href="https://www.instagram.com/_rosh_.n?igsh=ZzIxcHcyY2oyNnZw" target="_blank" rel="noopener noreferrer" variants={itemVariants}>
           <Instagram className="w-6 h-6 text-white hover:text-cyan-400 transition-colors" />
         </motion.a>
       </motion.div>
