@@ -7,20 +7,22 @@ export default function ContactForm() {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(null);
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    setLoading(true);
-    // Reset error/success states on new submission
-    setError(null);
-    setSuccess(false);
+  // In your ContactForm.js file
 
-    const data = {
-      name: String(event.target.name.value),
-      email: String(event.target.email.value),
-      phone: String(event.target.phone.value),
-      message: String(event.target.message.value),
-    };
+async function handleSubmit(event) {
+  event.preventDefault();
+  setLoading(true);
+  setError(null);
+  setSuccess(false);
 
+  const data = {
+    name: String(event.target.name.value),
+    email: String(event.target.email.value),
+    phone: String(event.target.phone.value),
+    message: String(event.target.message.value),
+  };
+
+  try {
     const response = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -30,15 +32,30 @@ export default function ContactForm() {
     if (response.ok) {
       console.log("Message sent successfully");
       setSuccess(true);
-      setLoading(false);
       event.target.reset(); // Resets the form fields
     } else {
-      const errorData = await response.json();
-      setError(errorData.message || "An unknown error occurred.");
-      console.log("Error sending message");
-      setLoading(false);
+      // Gracefully handle potential non-JSON error responses
+      let errorMessage = "An unknown error occurred.";
+      try {
+        // Try to parse a JSON error response from the server
+        const errorData = await response.json();
+        errorMessage = errorData.message || `Server responded with status: ${response.status}`;
+      } catch (jsonError) {
+        // If parsing fails, use the status text from the server
+        errorMessage = response.statusText || `An error occurred. Status: ${response.status}`;
+      }
+      setError(errorMessage);
+      console.error("Error sending message:", errorMessage);
     }
+  } catch (networkError) {
+    // Handle network errors (e.g., user is offline)
+    setError("Network error. Please check your connection.");
+    console.error("Network error:", networkError);
+  } finally {
+    // This 'finally' block ensures loading is always set to false
+    setLoading(false);
   }
+}
 
   return (
     <div className="w-full max-w-2xl p-8 mx-auto bg-white rounded-lg shadow-md">
