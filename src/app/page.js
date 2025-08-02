@@ -7,7 +7,7 @@ import SkillsSection from '../components/SkillsSection';
 import ProjectsSection from '../components/ProjectsSection';
 import ContactSection from '../components/ContactSection';
 import ImpactReport from '../components/ImpactReport'; 
-import ContactForm from '@/components/ContactForm';
+// import ContactForm from '@/components/ContactForm';
 
 const Page = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +48,7 @@ const Page = () => {
       <ProjectsSection />
        <ImpactReport /> 
       <ContactSection />
-       <ContactForm />
+       {/* <ContactForm /> */}
     </div>
   );
 };
