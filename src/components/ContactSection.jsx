@@ -14,7 +14,7 @@ const journeyData = {
   experience: [
     {
       role: 'Web Developer',
-      company: 'Egniol Services Pvt Ltd',
+      company: 'Egniol Services Pvt Ltd, Ahmedabad, Gujarat',
       year: 'Sept 2024 – Sept 2025',
       description: 'Building and maintaining many responsive web applications with Nextjs, Tailwind css and React a focus on performance and user experiencen.',
     },
