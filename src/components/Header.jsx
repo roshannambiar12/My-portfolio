@@ -8,7 +8,7 @@ const Header = ({ scrollToSection, scrollY, isMenuOpen, setIsMenuOpen }) => {
   // Function to handle CV download
   const handleCVDownload = () => {
     const link = document.createElement('a');
-    link.href = '/Roshancv5.pdf'; 
+    link.href = '/roshancv66.pdf'; 
     // Set the download attribute with the desired file name
     link.download = 'roshan-cv.pdf';
     // Append the link to the document body
