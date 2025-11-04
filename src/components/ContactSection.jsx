@@ -15,33 +15,33 @@ const journeyData = {
     {
       role: 'Web Developer',
       company: 'Egniol Services Pvt Ltd',
-      year: 'Jan 2025 – Present',
+      year: 'Sept 2024 – Sept 2025',
       description: 'Building and maintaining many responsive web applications with Nextjs, Tailwind css and React a focus on performance and user experiencen.',
     },
-    {
-      role: 'Web Developer ',
-      company: 'IVTREE Pvt Ltd',
-      year: 'Jul 2024 – Dec 2024',
-      description: 'Contributed to front-end development projects, ensuring cross-browser compatibility and responsive design.',
-    },
-    {
-      role: 'Web Developer',
-      company: 'Tech Octanet Services Pvt Ltd',
-      year: 'May 2024 – Jun 2024',
-      description: 'Assisted in developing and optimizing web interfaces using modern frontend technologies.',
-    },
-    {
-      role: 'Support Associate',
-      company: 'Speridian Technologies',
-      year: 'Apr 2023 – Apr 2024',
-      description: 'Provided technical support and assisted with maintaining internal systems and documentation.',
-    },
-    {
-      role: 'Full Stack Developer Intern',
-      company: 'Luminar Technolab',
-      year: 'Jan 2023 – Jul 2023',
-      description: 'Trained in full-stack development and participated in real-time projects using technologies like React, Node.js, and MongoDB.',
-    },
+    // {
+    //   role: 'Web Developer ',
+    //   company: 'IVTREE Pvt Ltd',
+    //   year: 'Jul 2024 – Dec 2024',
+    //   description: 'Contributed to front-end development projects, ensuring cross-browser compatibility and responsive design.',
+    // },
+    // {
+    //   role: 'Web Developer',
+    //   company: 'Tech Octanet Services Pvt Ltd',
+    //   year: 'May 2024 – Jun 2024',
+    //   description: 'Assisted in developing and optimizing web interfaces using modern frontend technologies.',
+    // },
+    // {
+    //   role: 'Support Associate',
+    //   company: 'Speridian Technologies',
+    //   year: 'Apr 2023 – Apr 2024',
+    //   description: 'Provided technical support and assisted with maintaining internal systems and documentation.',
+    // },
+    // {
+    //   role: 'Full Stack Developer Intern',
+    //   company: 'Luminar Technolab',
+    //   year: 'Jan 2023 – Jul 2023',
+    //   description: 'Trained in full-stack development and participated in real-time projects using technologies like React, Node.js, and MongoDB.',
+    // },
   ]
 };
 
@@ -79,7 +79,7 @@ const ContactSection = () => {
               {[
                 { icon: <Mail className="w-6 h-6" />, text: 'roshannambiar12@gmail.com', href: 'mailto:roshannambiar12@gmail.com' },
                 { icon: <Phone className="w-6 h-6" />, text: '+91 9995595860', href: 'tel:+919995595860' },
-                { icon: <MapPin className="w-6 h-6" />, text: 'Kannur, Kerala, India | Currently in Ahmedabad,Gujarat', href: '#' },
+                { icon: <MapPin className="w-6 h-6" />, text: 'Kannur, Kerala, India | Currently in Dubai, UAE', href: '#' },
               ].map((item, index) => (
                 <a
                   key={index}
@@ -140,7 +140,7 @@ const ContactSection = () => {
                 <div className="p-2 bg-green-600 rounded-full">
                   <Briefcase className="w-5 h-5 text-white" />
                 </div>
-                <h4 className="text-xl font-semibold text-green-400">Experience</h4>
+                <h4 className="text-xl font-semibold text-green-400">Previous Experience</h4>
               </div>
               <div className="space-y-4 ml-8">
                 {journeyData.experience.map((exp, index) => (
