@@ -11,55 +11,69 @@ const projects = [
     gradient: 'from-cyan-500 to-light-blue-500',
     link: 'https://www.egniol.co.in/',
   },
-  {
-    title: 'Link 2 Campus Website',
-    description: 'A streamlined website for Link 2 Campus, built with a focus on SEO and responsiveness.',
+   {
+    title: 'Yashwik Website',
+    description: 'A simple website for a restaurant, featuring SEO optimization and a responsive design.',
     tech: ['Next.js', 'React.js', 'Tailwind CSS'],
-    gradient: 'from-purple-500 to-indigo-500',
-    link: 'https://www.link2campus.com/',
+    gradient: 'from-lime-500 to-brown-500',
+    link: 'https://www.yashvik.co.in',
   },
   {
-    title: 'Egniol Digital Website',
-    description: 'A professional website for a digital agency, optimized for search engines and all devices.',
+    title: 'Gujju bhai Website',
+    description: 'A simple website for a restaurant, featuring SEO optimization and a responsive design.',
     tech: ['Next.js', 'React.js', 'Tailwind CSS'],
     gradient: 'from-red-500 to-yellow-500',
-    link: 'https://egnioldigital.com/',
+    link: 'https://www.gujjubhai.co/privacy-policy',
   },
-  {
-    title: 'LIGMR France Website',
-    description: 'An educational website for LIGMR France, designed to be responsive and SEO-friendly.',
-    tech: ['Next.js', 'React.js', 'Tailwind CSS'],
-    gradient: 'from-cyan-500 to-light-blue-500',
-    link: 'https://lyoninstitute.edu.eu/',
-  },
+  // {
+  //   title: 'Link 2 Campus Website',
+  //   description: 'A streamlined website for Link 2 Campus, built with a focus on SEO and responsiveness.',
+  //   tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+  //   gradient: 'from-purple-500 to-indigo-500',
+  //   link: 'https://www.link2campus.com/',
+  // },
+  // {
+  //   title: 'Egniol Digital Website',
+  //   description: 'A professional website for a digital agency, optimized for search engines and all devices.',
+  //   tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+  //   gradient: 'from-red-500 to-yellow-500',
+  //   link: 'https://egnioldigital.com/',
+  // },
+  // {
+  //   title: 'LIGMR France Website',
+  //   description: 'An educational website for LIGMR France, designed to be responsive and SEO-friendly.',
+  //   tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+  //   gradient: 'from-cyan-500 to-light-blue-500',
+  //   link: 'https://lyoninstitute.edu.eu/',
+  // },
   {
     title: 'Vardan Website',
     description: 'A sleek website for MSME Vardan, with a focus on SEO and responsive design.',
     tech: ['Next.js', 'React.js', 'Tailwind CSS'],
-    gradient: 'from-cyan-500 to-light-blue-500',
+    gradient: 'from-pink-500 to-amber-500',
     link: 'https://www.msmevardan.com/',
   },
-  {
-    title: 'Varniraj Website',
-    description: 'A modern, responsive website for Varniraj, optimized for high search engine rankings.',
-    tech: ['Next.js', 'React.js', 'Tailwind CSS'],
-    gradient: 'from-orange-500 to-amber-500',
-    link: 'https://www.varniraj.org/',
-  },
-  {
-    title: 'Egniol Agro Website',
-    description: 'A clean and responsive website for Egniol Agro, complete with SEO optimization.',
-    tech: ['Next.js', 'React.js', 'Tailwind CSS'],
-    gradient: 'from-lime-500 to-emerald-500',
-    link: 'https://www.egniolagro.com/',
-  },
-  {
-    title: 'Egniol Campus',
-    description: 'An educational website for Egniol, designed to be responsive and SEO-friendly.',
-    tech: ['React.js', 'Node.js', 'Express'],
-    gradient: 'from-cyan-500 to-light-blue-500',
-    link: 'https://www.egniolcampus.com/',
-  },
+  // {
+  //   title: 'Varniraj Website',
+  //   description: 'A modern, responsive website for Varniraj, optimized for high search engine rankings.',
+  //   tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+  //   gradient: 'from-orange-500 to-amber-500',
+  //   link: 'https://www.varniraj.org/',
+  // },
+  // {
+  //   title: 'Egniol Agro Website',
+  //   description: 'A clean and responsive website for Egniol Agro, complete with SEO optimization.',
+  //   tech: ['Next.js', 'React.js', 'Tailwind CSS'],
+  //   gradient: 'from-lime-500 to-emerald-500',
+  //   link: 'https://www.egniolagro.com/',
+  // },
+  // {
+  //   title: 'Egniol Campus',
+  //   description: 'An educational website for Egniol, designed to be responsive and SEO-friendly.',
+  //   tech: ['React.js', 'Node.js', 'Express'],
+  //   gradient: 'from-cyan-500 to-light-blue-500',
+  //   link: 'https://www.egniolcampus.com/',
+  // },
 ];
 
 const cardVariants = {
@@ -120,10 +134,10 @@ const ProjectsSection = () => {
                   ))}
                 </div>
                 <div className="flex gap-4">
-                  <a href="#" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-medium">
+                  {/* <a href="#" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-medium">
                     <Github className="w-4 h-4" />
                     Code
-                  </a>
+                  </a> */}
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors font-medium">
                     <ExternalLink className="w-4 h-4" />
                     Live Demo
